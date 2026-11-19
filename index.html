@@ -199,53 +199,55 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
     color: #ffc107;
 }
 
-/* About*/
- .about-section {
+/* About */
+.about-section {
     padding: 90px 0;
-    background: #f8f9fa;
+    background: #ffffff;
+}
 
- }
+.about-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 40px;
+}
 
- .about-image {
-    position: relative;
-    height: 450px;
- }
-
- .about-image img{
+/* About Image Style */
+.about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
- }
+    border-radius: 50% 20% 50% 20%;
+}
 
- .about-content {
+/* About Content */
+.about-content {
     padding: 20px 30px;
-  }
+}
 
-  .about-content h6 {
+.about-content h6 {
     color: #0d6efd;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 13px;
-  }
+}
 
-  .about-content h2{
+.about-content h2 {
     font-size: 38px;
     font-weight: 700;
     color: #222;
-  }
+}
 
-  .about-content p{
+.about-content p {
     color: #6c757d;
     line-height: 1.8;
     font-size: 16px;
-  }
+}
 
-  .about-feature {
+.about-feature {
     margin-top: 25px;
-  }
-
+}
 
 /* Our Services Section */
 #services {
@@ -288,6 +290,8 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 /* Card Body */
 #services .card-body {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Card Title */
@@ -303,6 +307,20 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
     font-size: 14px;
     color: #555555;
     line-height: 1.6;
+    min-height: 75px;
+}
+.card .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+    color: white;
 }
 
 /* Responsive Design */
@@ -314,6 +332,26 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
     #services .card-img-top {
         height: 220px;
     }
+}
+
+/* Gallery Images */
+#gallery .card {
+    height: 220px;
+    overflow: hidden;
+    border: none;
+}
+
+#gallery .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effect */
+#gallery .card img:hover {
+    transform: scale(1.08);
 }
 
 
@@ -528,33 +566,24 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
   </button>
 </div>
 
-<!--About us section-->
-
-
+<!--About us-->
 <section class="about-section" id="aboutus">
-  <div class="container">
-    <div class="row align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
 
-      <!-- Image Section -->
-      <div class="col-md-6 ">
-        <img 
-          src="https://ik.imgkit.net/3vlqs5axxjf/PCWW/uploadedImages/Articles/From_Our_Partners/2022/December/expedia%20sponsored%20tvi%20article.jpg?tr=w-600%2Ch-300%2Cfo-auto"
-          class="img-fluid about-img"
-          alt="Sri Lanka Travel"
-        >
-      </div>
-
-      <!-- Right Side Content -->
-
+            <!-- Image - Left Side -->
             <div class="col-md-6">
+                <img 
+                    src="https://ik.imgkit.net/3vlqs5axxjf/PCWW/uploadedImages/Articles/From_Our_Partners/2022/December/expedia%20sponsored%20tvi%20article.jpg?tr=w-600%2Ch-300%2Cfo-auto"
+                    class="img-fluid about-img"
+                    alt="Sri Lanka Travel">
+            </div>
 
+            <!-- Text - Right Side -->
+            <div class="col-md-6">
                 <div class="about-content">
-
                     <h6>ABOUT OUR COMPANY</h6>
-
-                    <h2>
-                        Discover The Beauty Of Sri Lanka
-                    </h2>
+                    <h2>Discover The Beauty Of Sri Lanka</h2>
 
                     <p>
                         Welcome to CN Travels! We are passionate about
@@ -573,34 +602,45 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
                         <li>✓ Comfortable and Safe Journeys</li>
                         <li>✓ Friendly and Professional Service</li>
                     </ul>
-
                 </div>
-
             </div>
 
         </div>
-
     </div>
-
 </section>
 
 <!--Services Section-->
 
-<section class="container my-5" id="services">
+<section id="services">
 
-<h2 class="text-center mb-4">Our Services</h2>
+    <div class="container my-5">
 
-<div class="row g-4">
+        <h2 class="text-center mb-4">Our Services</h2>
+
+        <div class="row g-4">
 
 <!-- Card 1 - Original Card -->
 <div class="col-md-3">
-<div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREfuIFzJbAUo3dMSQ_gFYnEWtWZ-Mz4JM9h3Ioa1YJdg&s=10" class="card-img-top" alt="Temple">
-<div class="card-body">
-<h5 class="card-title">Temple of the Sacred Tooth Relic</h5>
-<p class="card-text">Kandy is a key city located in the central province of Sri Lanka. It was the Sinhalese monarchy’s last capital in the kingdom of Kandy. One of the most important places in Kandy is ‘Kandy Dalada Maligawa‘; it is the temple of sacred tooth relics.</p>
-</div>
-</div>
+    <div class="card h-100">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREfuIFzJbAUo3dMSQ_gFYnEWtWZ-Mz4JM9h3Ioa1YJdg&s=10" class="card-img-top" alt="Temple">
+
+        <div class="card-body">
+            <h5 class="card-title">Temple of the Sacred Tooth Relic</h5>
+
+            <p class="card-text">
+                Kandy is a key city located in the central province
+                of Sri Lanka. 
+            </p>
+
+            <a href="https://en.wikipedia.org/wiki/Temple_of_the_Tooth"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
+
+        </div>
+    </div>
 </div>
 
 <!-- Card 2 -->
@@ -610,6 +650,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Nine Arch Bridge</h5>
 <p class="card-text">Explore the beautiful Nine Arch Bridge in Ella, Sri Lanka.</p>
+<a href="https://en.wikipedia.org/wiki/Nine_Arch_Bridge"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -621,6 +666,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Sigiriya Rock</h5>
 <p class="card-text">Discover the historical beauty of Sigiriya Rock Fortress.</p>
+<a href="https://en.wikipedia.org/wiki/Sigiriya"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -632,6 +682,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Mirissa Beach</h5>
 <p class="card-text">Enjoy the beautiful beaches of Sri Lanka.</p>
+<a href="https://en.wikipedia.org/wiki/Mirissa"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -643,6 +698,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Galle Fort</h5>
 <p class="card-text">Explore the historical Galle Fort.</p>
+<a href="https://en.wikipedia.org/wiki/Galle_Fort"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -654,6 +714,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Nuwara Eliya</h5>
 <p class="card-text">Experience the beautiful tea plantations.</p>
+<a href="https://en.wikipedia.org/wiki/Nuwara_Eliya"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -665,6 +730,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Yala National Park</h5>
 <p class="card-text">Discover amazing wildlife in Sri Lanka.</p>
+<a href="https://en.wikipedia.org/wiki/Yala_National_Park"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -676,6 +746,11 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 <div class="card-body">
 <h5 class="card-title">Unawatuna Beach</h5>
 <p class="card-text">Relax and enjoy the beautiful coastal scenery.</p>
+<a href="https://en.wikipedia.org/wiki/Unawatuna"
+               class="btn btn-primary"
+               target="_blank">
+                Read More
+            </a>
 </div>
 </div>
 </div>
@@ -696,9 +771,9 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
 
         <!-- Image 1 -->
         <div class="col-md-3">
-            <a href="https://nerdnomads.com/wp-content/uploads/2014/04/DSC08491.jpg">
+            <a href="https://handofcolors.in/wp-content/uploads/2025/08/DSC_0178-900x618.jpg">
                 <div class="card">
-                    <img src="https://nerdnomads.com/wp-content/uploads/2014/04/DSC08491.jpg" class="card-img-top" alt="Gallery Image 1">
+                    <img src="https://handofcolors.in/wp-content/uploads/2025/08/DSC_0178-900x618.jpg" class="card-img-top" alt="Mirissa Beach">
                 </div>
             </a>
         </div>
@@ -707,7 +782,7 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
         <div class="col-md-3">
             <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQiVwF-wSOVy5gYD9NvXPJB7UCPwQayA0UuHuXtALeg&s=10">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQiVwF-wSOVy5gYD9NvXPJB7UCPwQayA0UuHuXtALeg&s=10" class="card-img-top" alt="Gallery Image 2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQiVwF-wSOVy5gYD9NvXPJB7UCPwQayA0UuHuXtALeg&s=10" class="card-img-top" alt="Sigiriya Rock Fortress">
                 </div>
             </a>
         </div>
@@ -716,17 +791,17 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
         <div class="col-md-3">
             <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3WyAg-Dxjlhm45iGfZaHqJ2fvbRneum4_-SaQfqIQog&s=10">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3WyAg-Dxjlhm45iGfZaHqJ2fvbRneum4_-SaQfqIQog&s=10" class="card-img-top" alt="Gallery Image 3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3WyAg-Dxjlhm45iGfZaHqJ2fvbRneum4_-SaQfqIQog&s=10" class="card-img-top" alt="Ella Nine Arch Bridge">
                 </div>
             </a>
         </div>
 
         <!-- Image 4 -->
         <div class="col-md-3">
-            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8-iaSEg00Z9IJ2FWp0__V-8moW5Ojfvsl0RVwxFeXg&s=10">
+            <a href="https://www.vcvillasandresorts.com/medias/locations/medium/146/locations-galle-fort-4.jpg">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL8-iaSEg00Z9IJ2FWp0__V-8moW5Ojfvsl0RVwxFeXg&s=10" class="card-img-top" alt="Gallery Image 4">
-                </div>
+                    <img src="https://www.vcvillasandresorts.com/medias/locations/medium/146/locations-galle-fort-4.jpg" class="card-img-top" alt="The South Beach Galle ">
+                    </div>
             </a>
         </div>
 
@@ -734,16 +809,16 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
         <div class="col-md-3">
             <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY2y8hNC1r2tt2dlDCIEFiPVJ-pg0RBy6kGpMd-Clpvg&s=10">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY2y8hNC1r2tt2dlDCIEFiPVJ-pg0RBy6kGpMd-Clpvg&s=10" class="card-img-top" alt="Gallery Image 5">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY2y8hNC1r2tt2dlDCIEFiPVJ-pg0RBy6kGpMd-Clpvg&s=10" class="card-img-top" alt="Yala National Park">
                 </div>
             </a>
         </div>
 
         <!-- Image 6 -->
         <div class="col-md-3">
-            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKuVDTJqL7C81KXIHeNVYB4q1U-RScSVtpdC5yY1Pt4Q&s=10">
+            <a href="https://do6raq9h04ex.cloudfront.net/sites/8/2023/07/Chasing-Waterfalls-The-5-Most-Spectacular-Cascades-of-Nuwara-Eliya-1050x700-1.jpg">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKuVDTJqL7C81KXIHeNVYB4q1U-RScSVtpdC5yY1Pt4Q&s=10" class="card-img-top" alt="Gallery Image 6">
+                    <img src="https://do6raq9h04ex.cloudfront.net/sites/8/2023/07/Chasing-Waterfalls-The-5-Most-Spectacular-Cascades-of-Nuwara-Eliya-1050x700-1.jpg" class="card-img-top" alt="Nuwara Eliya Lovers Leap Falls">
                 </div>
             </a>
         </div>
@@ -752,7 +827,7 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
         <div class="col-md-3">
             <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD9p5lLwyLb4n5BCOYEHZPldlVvKKl10oDSySfDGts-w&s=10">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD9p5lLwyLb4n5BCOYEHZPldlVvKKl10oDSySfDGts-w&s=10" class="card-img-top" alt="Gallery Image 7">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD9p5lLwyLb4n5BCOYEHZPldlVvKKl10oDSySfDGts-w&s=10" class="card-img-top" alt="Nuwara Eliya">
                 </div>
             </a>
         </div>
@@ -761,7 +836,7 @@ href="https://cdn.jsdelivr.net/npm/lightgallery@2.8.3/css/lightgallery-bundle.mi
         <div class="col-md-3">
             <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxbyaZeq6Z4uJ7N7VxQoqtx7JjLc4JFe05rj0--dT84w&s=10">
                 <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxbyaZeq6Z4uJ7N7VxQoqtx7JjLc4JFe05rj0--dT84w&s=10" class="card-img-top" alt="Gallery Image 8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxbyaZeq6Z4uJ7N7VxQoqtx7JjLc4JFe05rj0--dT84w&s=10" class="card-img-top" alt="The Temple of the Tooth Relic">
                 </div>
             </a>
         </div>
